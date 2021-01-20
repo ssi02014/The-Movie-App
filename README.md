@@ -4,6 +4,7 @@
 <br>
 
 ## 🔖 Boiler-plate를 사용하기 전 행동 수칙
+### Boiler-Plater: https://github.com/ssi02014/BoilerPlate
 1. dev.js file을 config 폴더 안에 생성해주세요.
 2. mongoDB 정보를 dev.js file안에다가 넣어주세요.
 3. " npm install or yarn install "을 root directory에서 입력해주세요. (백엔드 종속성 다운받기)
