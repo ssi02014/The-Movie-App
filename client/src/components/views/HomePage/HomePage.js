@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {  withRouter } from 'react-router-dom';
-import Header from '../Header';
 import MainImage from './Sections/MainImage';
 import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../../config/Config';
 import GridCard from './Sections/GridCard';
@@ -28,6 +27,7 @@ const HomePage = () => {
             setCurrentPage(data.page);
         })
     }
+
     const loadMoreItems = () => {
         const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${currentPage + 1}`;
 
@@ -35,7 +35,6 @@ const HomePage = () => {
     }
     return (
         <>
-            <Header></Header>
             <div style={{
                 width: '100%',
                 margin: '0',
@@ -79,7 +78,7 @@ const HomePage = () => {
                     display: 'flex',
                     justifyContent: 'center'
                 }}>
-                    <button onClick={loadMoreItems}>Load More</button>
+                    <button onClick={loadMoreItems} style={{margin: '20px 0'}}>Load More</button>
                 </div>
             </div>
         </>
