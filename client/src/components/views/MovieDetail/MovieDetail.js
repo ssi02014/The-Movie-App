@@ -3,10 +3,14 @@ import { withRouter } from 'react-router-dom';
 import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../../config/Config';
 import MainImage from '../HomePage/Sections/MainImage';
 import MovieInfo from './MovieInfo';
+import GridCard from '../HomePage/Sections/GridCard';
+import { Row } from 'antd';
 
 const MovieDetail = (props) => {
     const movieId = props.match.params.movieId;
     const [movie, setMovie] = useState([]);
+    const [casts, setCasts] = useState([]);
+    const [actorToggle, setActorToggle] = useState(false);
 
     useEffect(() => {
 
@@ -18,9 +22,15 @@ const MovieDetail = (props) => {
             .then(response => response.json())
             .then(data => {
                 setMovie(data);
-            })
-    }, [])
+            });
 
+        fetch(endPointCrew)
+        .then(response => response.json())
+        .then(data => {
+            setCasts(data.cast);
+            console.log(data.cast);
+        });    
+    }, []);
 
     return (
         <div>
@@ -43,8 +53,27 @@ const MovieDetail = (props) => {
                 {/*Actor Grid*/}
 
                 <div style={{ display: 'flex', justifyContent: 'center', margin: ' 2rem'}}>
-                    <button>Toggle Actor View</button>
+                    <button 
+                        onClick={() => setActorToggle(!actorToggle)}
+                        style={{ padding: '5px 10px'}}
+                    > Toggle Actor View
+                    </button>
                 </div>
+
+                {actorToggle && 
+                    <Row gutter={[16, 16]}>
+                        {casts && casts.map((cast, index) => (
+                            <React.Fragment key={index}>
+                                <GridCard
+                                    image={cast.profile_path ? 
+                                    `${IMAGE_BASE_URL}w500${cast.profile_path}` : null}
+                                    characterName={cast.name}
+
+                                ></GridCard>
+                            </React.Fragment>
+                        ))}
+                    </Row>
+                }
             </div>
         </div>
     );

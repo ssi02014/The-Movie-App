@@ -1,11 +1,11 @@
 # 💻 The Movie App
-### Boiler Plate를 가져와서 Movie App 만들기
+### 프로젝트 개요: Boiler Plate를 가져와서 The Movie App 만들기
 
 <br>
 
 ## 🔖 Boiler-plate를 사용하기 전 행동 수칙
 ### Boiler-Plater: https://github.com/ssi02014/BoilerPlate
-**Boiler-Plate란? : 자주 사용하는 기능들을 미리만들어 놓은 것(로그인, 로그아웃, 회원가입)**
+**👋 Boiler-Plate란 : 자주 사용하는 기능들을 재사용할 수 있게 미리만들어 놓은 것(로그인, 로그아웃, 회원가입)**
 1. dev.js file을 config 폴더 안에 생성해주세요.
 2. mongoDB 정보를 dev.js file안에다가 넣어주세요.
 3. " npm install or yarn install "을 backend directory에서 입력해주세요. (백엔드 종속성 다운받기)
@@ -13,7 +13,7 @@
 
 <br>
 
-## 👨🏻‍💻 Movie Api
+## 👨🏻‍💻 Movie API
 ### **TMDB** : https://www.themoviedb.org/?language=ko;
 
 <br>
