@@ -1,0 +1,13 @@
+.favorite-btn {
+    background: #fff;
+    border: 1.5px solid #000;
+    outline: none;
+    &:hover {
+        color:rgb(45, 183, 247);
+        border: 1.5px solid rgb(45, 183, 247);
+    }
+    &.active {
+        color:rgb(45, 183, 247);
+        border: 1.5px solid rgb(45, 183, 247);
+    }
+}
