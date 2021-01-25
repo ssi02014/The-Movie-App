@@ -7,6 +7,7 @@ const port = 5000; //서버 포트
 
 const { auth } = require("./middleware/auth"); //auth 미들웨어를 가져옴
 const { User } = require("./models/User"); // User 모델을 가져옴
+const { Favorite } = require("./models/Favorite");
 
 //application/json 분석해서 가져 올 수 있게 함
 app.use(bodyParser.json());
@@ -109,6 +110,18 @@ app.get('/api/users/logout', auth, (req, res) => {
     };
     return res.status(200).send({ success: true });
   });
+});
+
+app.post('/api/favorite/favoriteNumber', (req, res) => {
+
+  Favorite.find({ "movieId": req.body.movieId })
+    .exec((err, info) => {
+      if(err) return res.status(400).send(err);
+      res.status(200).json({ 
+        success: true, 
+        favoriteNumber: info.length,
+      })
+    })
 });
 
 app.listen(port, () => console.log(`Example app listen ${port}`));

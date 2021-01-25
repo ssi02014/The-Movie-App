@@ -5,6 +5,8 @@ import MainImage from '../HomePage/Sections/MainImage';
 import MovieInfo from './MovieInfo';
 import GridCard from '../HomePage/Sections/GridCard';
 import { Row } from 'antd';
+import Favorite from './Favorite';
+import Header from '../Header';
 
 const MovieDetail = (props) => {
     const movieId = props.match.params.movieId;
@@ -34,7 +36,7 @@ const MovieDetail = (props) => {
 
     return (
         <div>
-            
+            <Header></Header>
             {/* Header */}
             <MainImage 
                 image={`${IMAGE_BASE_URL}w1280${movie.backdrop_path}`}
@@ -45,6 +47,13 @@ const MovieDetail = (props) => {
             {/* Body */}
 
             <div style={{ width: '85%', margin: '1rem auto'}}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
+                    <Favorite
+                        movieInfo={movie}
+                        movieId={movieId}
+                        userFrom={localStorage.getItem('userID')}
+                    />
+                </div>
                 
                 {/* Movie Info */}
 

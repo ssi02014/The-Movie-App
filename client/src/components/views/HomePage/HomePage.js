@@ -3,6 +3,7 @@ import {  withRouter } from 'react-router-dom';
 import MainImage from './Sections/MainImage';
 import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../../config/Config';
 import GridCard from './Sections/GridCard';
+import Header from '../Header';
 import {Row} from 'antd';
 
 const HomePage = () => {
@@ -35,6 +36,7 @@ const HomePage = () => {
     }
     return (
         <>
+            <Header></Header>
             <div style={{
                 width: '100%',
                 margin: '0',

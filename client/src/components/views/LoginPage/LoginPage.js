@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser} from '../../../actions/user_action';
 import { withRouter } from 'react-router-dom';
+import Header from '../Header';
 
 const LoginPage = (props) => {
     const dispatch = useDispatch();
@@ -34,6 +35,7 @@ const LoginPage = (props) => {
                 console.log(response);
                 
                 if(response.payload.loginSuccess) {
+                    window.localStorage.setItem('userID', response.payload.userID);
                     props.history.push('/');
                 } else {
                     alert('Error');
@@ -42,25 +44,28 @@ const LoginPage = (props) => {
     }
 
     return (
-        <div style={{
-            display: 'flex', justifyContent: 'center', alignItems: 'center', 
-            width: '100%', height: '100vh'
-        }}>
-            <form style={{ display: 'flex', flexDirection: 'column' }}
-            onSubmit={onSubmitHandler}
-            >
-                <label>Email</label>
-                <input type="email" value={email} onChange={onEmailHandler}></input>
-                <label>Password</label>
-                <input type="password" value={password} onChange={onPasswordHandler}></input>
-                
-                <br />
+        <>
+            <Header></Header>
+            <div style={{
+                display: 'flex', justifyContent: 'center', alignItems: 'center', 
+                width: '100%', height: '100vh'
+            }}>
+                <form style={{ display: 'flex', flexDirection: 'column' }}
+                onSubmit={onSubmitHandler}
+                >
+                    <label>Email</label>
+                    <input type="email" value={email} onChange={onEmailHandler}></input>
+                    <label>Password</label>
+                    <input type="password" value={password} onChange={onPasswordHandler}></input>
+                    
+                    <br />
 
-                <button>
-                    Login
-                </button>
-            </form>
-        </div>
+                    <button>
+                        Login
+                    </button>
+                </form>
+            </div>
+        </>
     );
 };
 

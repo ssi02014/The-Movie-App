@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, withRouter } from 'react-router-dom';
 import '../../scss/Header.scss';
-
-
     
 const Header = (props) => {
     const [login, setLogin] = useState(false);
 
-    useEffect((login) => {
+    useEffect(() => {
         axios.get('/api/users/auth')
         .then(response => {
             if(response.data.isAuth) {

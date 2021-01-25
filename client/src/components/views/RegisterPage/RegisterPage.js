@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import { registerUser} from '../../../actions/user_action';
 import { withRouter } from 'react-router-dom';
+import { Header } from 'antd/lib/layout/layout';
 
 const RegisterPage = (props) => {
     const dispatch = useDispatch();
@@ -55,6 +56,8 @@ const RegisterPage = (props) => {
             });
     }
     return (
+        <>
+            <Header></Header>
             <div style={{
                 display: 'flex', justifyContent: 'center', alignItems: 'center', 
                 width: '100%', height: '100vh'
@@ -81,6 +84,7 @@ const RegisterPage = (props) => {
                     </button>
                 </form>
             </div>
+        </>    
     );
 };
 
