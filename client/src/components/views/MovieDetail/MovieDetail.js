@@ -48,7 +48,7 @@ const MovieDetail = (props) => {
                 
                 {/* Movie Info */}
 
-                <MovieInfo movie={movie}></MovieInfo>
+                <MovieInfo movie={movie} />
 
                 {/*Actor Grid*/}
 
@@ -68,8 +68,7 @@ const MovieDetail = (props) => {
                                     image={cast.profile_path ? 
                                     `${IMAGE_BASE_URL}w500${cast.profile_path}` : null}
                                     characterName={cast.name}
-
-                                ></GridCard>
+                                />
                             </React.Fragment>
                         ))}
                     </Row>
