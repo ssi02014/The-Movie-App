@@ -19,7 +19,6 @@ const MovieDetail = (props) => {
         const endPointCrew = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
         const endPointInfo = `${API_URL}movie/${movieId}?api_key=${API_KEY}`
         
-        console.log(props.match);
         fetch(endPointInfo)
             .then(response => response.json())
             .then(data => {
@@ -30,7 +29,6 @@ const MovieDetail = (props) => {
         .then(response => response.json())
         .then(data => {
             setCasts(data.cast);
-            console.log(data.cast);
         });    
     }, []);
 

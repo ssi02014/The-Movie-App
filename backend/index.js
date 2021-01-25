@@ -124,4 +124,23 @@ app.post('/api/favorite/favoriteNumber', (req, res) => {
     })
 });
 
+app.post('/api/favorite/favorited', (req, res) => {
+
+  Favorite.find({ 
+    "movieId": req.body.movieId, 
+    "userFrom": req.body.userFrom,
+  })
+  .exec((err, info) => {
+    let result = false;
+    if(err) return res.status(400).send(err);
+    if(info.length !== 0) {
+      result = true;
+    }
+    res.status(200).json({ 
+      success: true, 
+      favorited: result,
+    })
+  })
+});
+
 app.listen(port, () => console.log(`Example app listen ${port}`));
