@@ -1,5 +1,5 @@
 # 💻 The Movie App
-### node.js, React를 이용해 만든 The Movie App
+### node.js와 React로 만든 The Movie App
 
 <br>
 
@@ -19,17 +19,17 @@
 <br>
 
 ## 📈 프로젝트 하면서 학습한 내용
-1. **fetch, axios**를 이용한 API 요청
-2. **antd**를 이용한 디자인
+1. **antd**를 이용한 디자인
 
 
 <br>
 
 ## 🔍 The Movie App 기능
-1. Boiler-plate: Login, Logout, Register 기능
+1. Boiler-plate: Login, Logout, Register, HOC 기능
 2. Movie Chart 보기
-3. 영화 상세 정보 확인하기
-4. Favorite button 눌러서 Favorite 영화 추가하기
+3. Movie Detail Page 구현
+4. Movie Detail Page에서 출연 배우 사진 보기
+4. Movie Detail Page 에서 Favorite button 눌러서 Favorite 영화 추가하기
 5. Favorite Page에 Favorite한 영화 리스트 출력하기
 
 <br>
