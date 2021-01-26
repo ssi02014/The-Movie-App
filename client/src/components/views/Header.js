@@ -3,16 +3,19 @@ import axios from 'axios';
 import { Link, withRouter } from 'react-router-dom';
 import '../../scss/Header.scss';
     
-const Header = (props) => {
+const Header = ({ history }) => {
     const [login, setLogin] = useState(false);
 
     useEffect(() => {
-        axios.get('/api/users/auth')
-        .then(response => {
-            if(response.data.isAuth) {
-                setLogin(!login);
-            }
-        })
+        // axios.get('/api/users/auth')
+        // .then(response => {
+        //     if(response.data.isAuth) {
+        //         setLogin(!login);
+        //     }
+        // })
+        if(localStorage.getItem('userID')) {
+            setLogin(!login);
+        }
     }, []);
 
     const onClickHandler = () => {
@@ -22,7 +25,8 @@ const Header = (props) => {
 
             if (response.data.success) {
                 setLogin(!login);
-                props.history.push('/');
+                localStorage.removeItem('userID');
+                history.push('/');
             } else {
                 alert("로그아웃하는데 실패하였습니다.");
             }
@@ -31,8 +35,10 @@ const Header = (props) => {
 
     return (
         <header>
-            <h1 className="header-title"><Link to="/">MINJAE</Link></h1>
-            <Link to="/favorite" className="header-favorite">Favorite</Link>
+            <div className="header-left">
+                <h1 className="header-title"><Link to="/">MINJAE</Link></h1>
+                <Link to="/favorite" className="header-favorite">Favorite</Link>
+            </div>
             <ul className="header-menu">
                 {login ? 
                 <li><Link to="/" onClick={onClickHandler}>Logout</Link></li>

@@ -36,7 +36,6 @@ const HomePage = () => {
     }
     return (
         <>
-            <Header></Header>
             <div style={{
                 width: '100%',
                 margin: '0',

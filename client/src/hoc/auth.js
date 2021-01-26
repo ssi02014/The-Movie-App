@@ -26,10 +26,10 @@ export default function(SpecificComponent, option, adminRoute = null) {
                     }
                 } else {
                     //로그인한 상태
-                    if (adminRoute && !response.payload.isAdmin ) {
+                    if (adminRoute && !response.payload.isAdmin) {
                         props.history.push('/');
                     } else {
-                        if(!option) {
+                        if(option === false) {
                             props.history.push('/');
                         }
                     }

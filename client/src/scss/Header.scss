@@ -17,21 +17,30 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    .header-title {
-        margin-left: 1.5rem;
-        margin-bottom: 0;
-        a {
+    .header-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header-title {
+            margin-left: 1.5rem;
+            margin-bottom: 0;
+            a {
+                color: #000;
+                &:hover {
+                    color: rgb(30, 149, 247);
+                }
+            }
+        }
+        .header-favorite {
+            font-size: 1.3rem;
+            margin-left: 20px;
             color: #000;
             &:hover {
                 color: rgb(30, 149, 247);
             }
         }
     }
-    .header-favorite {
-        margin-left: 20px;
-        margin-right: 80%;
-        font-size: 1.5rem;
-    }
+    
     .header-menu {
         display: flex;
         list-style: none;

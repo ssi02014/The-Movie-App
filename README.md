@@ -1,5 +1,5 @@
 # 💻 The Movie App
-### 프로젝트 개요: Boiler Plate를 가져와서 The Movie App 만들기
+### node.js, React를 이용해 만든 The Movie App
 
 <br>
 
@@ -28,6 +28,9 @@
 ## 🔍 The Movie App 기능
 1. Boiler-plate: Login, Logout, Register 기능
 2. Movie Chart 보기
+3. 영화 상세 정보 확인하기
+4. Favorite button 눌러서 Favorite 영화 추가하기
+5. Favorite Page에 Favorite한 영화 리스트 출력하기
 
 <br>
 
