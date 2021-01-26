@@ -7,6 +7,7 @@ import RegisterPage from './components/views/RegisterPage/RegisterPage';
 import Auth from './hoc/auth';
 import MovieDetail from './components/views/MovieDetail/MovieDetail';
 import mainPage from './Pages/mainPage';
+import FavoritePage from './components/views/FavoritePage/FavoritePage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/login" component={Auth(LoginPage, false)}></Route>
             <Route path="/register" component={Auth(RegisterPage, false)}></Route>
             <Route path="/movie/:movieId" component={MovieDetail}></Route>
+            <Route path="/favorite" component={Auth(FavoritePage, true)}></Route>
           </Switch>
       </Router>
     </>

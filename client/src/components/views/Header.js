@@ -32,6 +32,7 @@ const Header = (props) => {
     return (
         <header>
             <h1 className="header-title"><Link to="/">MINJAE</Link></h1>
+            <Link to="/favorite" className="header-favorite">Favorite</Link>
             <ul className="header-menu">
                 {login ? 
                 <li><Link to="/" onClick={onClickHandler}>Logout</Link></li>
