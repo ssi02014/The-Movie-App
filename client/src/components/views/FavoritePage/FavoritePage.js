@@ -69,6 +69,7 @@ const FavoritePage = () => {
             <Header></Header>
             <div style={{ width: '85%', margin: '5rem auto'}}>
                 <h2>Favorite Movies</h2>
+                
                 <hr />
 
                 <table>
@@ -83,8 +84,6 @@ const FavoritePage = () => {
                         {renderCard}
                     </tbody>
                 </table>
-                
-                       
             </div>
         </>
     );
