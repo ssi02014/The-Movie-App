@@ -3,13 +3,18 @@
 
 <br>
 
-## 🔖 Boiler-plate를 사용하기 전 행동 수칙
+## 🔖 The Movie App을 사용하기 전 행동 수칙
 ### Boiler-Plater: https://github.com/ssi02014/BoilerPlate
-**👋 Boiler-Plate란 : 자주 사용하는 기능들을 재사용할 수 있게 미리만들어 놓은 것(로그인, 로그아웃, 회원가입)**
-1. dev.js file을 config 폴더 안에 생성해주세요.
+1. dev.js file을 backend/config 폴더 안에 생성해주세요.
 2. mongoDB 정보를 dev.js file안에다가 넣어주세요.
-3. " npm install or yarn install "을 backend directory에서 입력해주세요. (백엔드 종속성 다운받기)
-4. " npm install or yarn install "을 client directory에서 입력해주세요. (프론트엔드 종속성 다운받기)
+```javascript
+    //dev.js 파일 내용 예시
+    module.exports = {
+        mongoURI: 'mongodb+srv://minjae:******@boiler-plate.03g6t.mongodb.net/<dbname>?retryWrites=true&w=majority'
+    }
+```
+3. " npm install or yarn install "을 backend 폴더에서 입력해주세요. (백엔드 종속성 다운받기)
+4. " npm install or yarn install "을 client 폴더에서 입력해주세요. (프론트엔드 종속성 다운받기)
 
 <br>
 
@@ -27,9 +32,9 @@
 ## 🔍 The Movie App 기능
 1. Boiler-plate: Login, Logout, Register, HOC 기능
 2. Movie Chart 보기
-3. Movie Detail Page 구현
-4. Movie Detail Page에서 출연 배우 사진 보기
-4. Movie Detail Page 에서 Favorite button 눌러서 Favorite 영화 추가하기
+3. Movie Detail Page
+    - 출연 배우 목록 및 사진 보기
+4. Movie Detail Page 에서 Favorite button 눌러서 Favorite 영화 목록에 추가하기
 5. Favorite Page에 Favorite한 영화 리스트 출력하기
 
 <br>
@@ -55,4 +60,5 @@
 ```
 
 <br>
+
 
