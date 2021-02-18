@@ -11,30 +11,28 @@
 <hr />
 
 ## 🔖 The Movie App을 사용하기 전 행동 수칙
-### Boiler-Plater: https://github.com/ssi02014/BoilerPlate
 1. **" npm install or yarn install "** 을 backend 폴더에서 입력해주세요. (백엔드 종속성 다운받기)
 2. **" npm install or yarn install "** 을 client 폴더에서 입력해주세요. (프론트엔드 종속성 다운받기)
 3. backend 폴더에서 **" npm start or yarn start "** 를 통해 server를 실행시켜주세요.
 4. cliend 폴더에서 **" npm start or yarn start "** 를 통해 client를 실행시켜주세요.
 5. 회원가입을 해주세요. 
+    - 또는, **ID: 1q2w3e4r@naver.com / Pwd: 1q2w3e4r** 로그인을 해서 App 기능들을 확인해보세요.
 6. 회원가입 한 계정을 통해서 로그인 해주세요.
 7. 로그인 후 App 기능을 확인합니다.
-    - 또는, **ID: 1q2w3e4r@naver.com / Pwd: 1q2w3e4r** 로그인을 해서 App 기능들을 확인해보세요.
+
+<br />
+
+### ❗❗ 본 프로젝트는 기존에 만든 Boiler-Plater의 서버와 공유되고 있습니다. 
+    - Boiler-Plater: https://github.com/ssi02014/BoilerPlate
 
 <br>
 
-## 👨🏻‍💻 Movie API
+## 📈 Movie API
 ### **TMDB** : https://www.themoviedb.org/?language=ko;
 
 <br>
 
-## 📈 프로젝트 하면서 학습한 내용
-1. **antd**를 이용한 디자인
-
-
-<br>
-
-## 🔍 The Movie App 기능
+## 👨🏻‍💻 The Movie App 기능
 1. **Boiler-plate: Login, Logout, Register, HOC 기능**
 2. **Movie Chart 보기**
 3. **Movie Detail Page**
